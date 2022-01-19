@@ -1,0 +1,39 @@
+version: '3'
+
+volumes:
+  vendor-store:
+  node_modules-store:
+
+services:
+  php:
+    container_name: php
+    build: ./docker/php
+    volumes:
+    - ./web:/var/www
+    environment:
+      TZ: Asia/Tokyo
+
+  nginx:
+    image: nginx
+    container_name: nginx-php
+    ports:
+    - 80:80
+    volumes:
+    - ./web:/var/www
+    - ./docker/nginx/:/etc/nginx/conf.d/
+    depends_on:
+    - php
+
+  db:
+    image: mysql/mysql-server:5.7.28
+    environment:
+      MYSQL_DATABASE: laravel_local
+      MYSQL_ROOT_PASSWORD: password
+      MYSQL_ROOT_HOST: "%"
+      TZ: "Asia/Tokyo"
+    ports:
+      - 13406:3306
+    volumes:
+    - ./docker/db/data:/var/lib/mysql
+    - ./docker/db/my.cnf:/etc/mysql/conf.d/my.cnf
+    - ./docker/db/sql:/docker-entrypoint-initdb.d
