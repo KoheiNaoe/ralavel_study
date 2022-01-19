@@ -25,7 +25,7 @@ services:
     - php
 
   db:
-    image: mysql/mysql-server:5.7.28
+    image: mysql:5.7
     environment:
       MYSQL_DATABASE: laravel_local
       MYSQL_ROOT_PASSWORD: password
