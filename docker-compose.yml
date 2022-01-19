@@ -9,7 +9,7 @@ services:
     container_name: php
     build: ./docker/php
     volumes:
-    - ./web:/var/www
+    - ./laravel:/var/www
     environment:
       TZ: Asia/Tokyo
 
@@ -19,7 +19,7 @@ services:
     ports:
     - 80:80
     volumes:
-    - ./web:/var/www
+    - ./laravel:/var/www
     - ./docker/nginx/:/etc/nginx/conf.d/
     depends_on:
     - php
