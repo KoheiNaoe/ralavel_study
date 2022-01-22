@@ -6,3 +6,7 @@
 
 # サーバー起動コマンド
 `php artisan serve`
+
+# Laravel Mixインストールコマンド
+`npm install`
+`npm run watch`
