@@ -1,5 +1,5 @@
 # laravel プロジェクト作成コマンド
-`composer create-project --prefer-dist laravel/laravel laravel`
+`composer create-project --prefer-dist laravel/laravel ./`
 
 # permission変更
 `chown -R www-data:www-data /var/www`
