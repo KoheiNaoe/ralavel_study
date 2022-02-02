@@ -16,3 +16,9 @@
 # Laravel Mixインストールコマンド
 `npm install`
 `npm run watch`
+
+# キャッシュクリア
+'php artisan config:cache && php artisan route:cache'
+
+# Laravel経由でMySQLにテーブルを作成する。（マイグレーション）
+'php artisan migrate'

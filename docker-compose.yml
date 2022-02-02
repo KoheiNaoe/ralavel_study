@@ -27,9 +27,10 @@ services:
   db:
     image: mysql:5.7
     environment:
+      MYSQL_ROOT_PASSWORD: root
       MYSQL_DATABASE: laravel_local
-      MYSQL_ROOT_PASSWORD: password
-      MYSQL_ROOT_HOST: "%"
+      MYSQL_USER: root
+      MYSQL_PASSWORD: password
       TZ: "Asia/Tokyo"
     ports:
       - 13406:3306
