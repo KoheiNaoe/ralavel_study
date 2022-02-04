@@ -33,7 +33,7 @@ services:
       MYSQL_PASSWORD: password
       TZ: "Asia/Tokyo"
     ports:
-      - 13406:3306
+      - 13206:3306
     volumes:
     - ./docker/db/data:/var/lib/mysql
     - ./docker/db/my.cnf:/etc/mysql/conf.d/my.cnf
