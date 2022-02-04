@@ -16,3 +16,29 @@
 # Laravel Mixインストールコマンド
 `npm install`
 `npm run watch`
+
+# キャッシュクリア
+`php artisan config:cache && php artisan route:cache && php artisan view:cache`
+
+# Laravel経由でMySQLにテーブルを作成する。（マイグレーション）
+`php artisan migrate`
+
+# シーダーファイル作成
+`php artisan make:seeder`
+
+# シーディング処理
+`php artisan db:seed`
+
+# モデル作成
+`php artisan make:model`
+
+# .envコピー
+`cp .env.example .env`
+## encryption keyの設定
+- `php artisan key:generate`
+
+# コンテナに入るコマンド
+`docker-compose exec php bash`
+
+# オートローダー最適化
+'composer install --optimize-autoloader --no-dev'
