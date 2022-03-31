@@ -48,3 +48,6 @@
 
 # オートローダー最適化
 'composer install --optimize-autoloader --no-dev'
+
+# npm起動
+`npm run development`
