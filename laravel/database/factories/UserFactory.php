@@ -2,6 +2,8 @@
 
 namespace Database\Factories;
 
+use App\Models\User;
+use Faker\Generator as Faker;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Support\Str;
 
@@ -37,3 +39,12 @@ class UserFactory extends Factory
         });
     }
 }
+
+$factory->define(App\Models\Person::class,
+        function (Faker $faker){
+            return [
+                'name' => $faker->name,
+                'mail' => $faker->safeEmail,
+                'age' => random_int(1,99),
+            ];
+        });

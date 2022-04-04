@@ -23,11 +23,17 @@
 # Laravel経由でMySQLにテーブルを作成する。（マイグレーション）
 `php artisan migrate`
 
+# マイグレーションファイル作成
+`php artisan make:migration`
+
 # シーダーファイル作成
 `php artisan make:seeder`
 
 # シーディング処理
 `php artisan db:seed`
+
+# コントローラー作成
+`php artisan make:controller`
 
 # モデル作成
 `php artisan make:model`
@@ -42,3 +48,6 @@
 
 # オートローダー最適化
 'composer install --optimize-autoloader --no-dev'
+
+# npm起動
+`npm run development`
